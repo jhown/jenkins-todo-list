@@ -1,0 +1,15 @@
+version: "3.7"
+
+services:
+  jenkins:
+    image: jenkis:latest
+    ports:
+    - "8080:8080"
+    - "50000:50000" 
+    volumes:
+    - "/home/usertqi/Jenkins:/var/jenkins_home"  
+    networks:
+    - jenkins
+     
+networks:
+  jenkins:
